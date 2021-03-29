@@ -4,13 +4,16 @@ alias bashprofile="code ~/.bashrc"
 alias apt-up="sudo apt-get update && sudo apt-get upgrade"
 alias loadbt="pactl load-module module-bluetooth-discover"
 alias restartbt="sudo systemctl restart bluetooth"
-alias dev='cd /home/cpustejovsky/development/ && ls -asl'
-alias godev='cd /home/cpustejovsky/go/src && ls -asl'
-alias learning='cd /home/cpustejovsky/development/personal/Learning && ls -asl'
-alias foss='cd /home/cpustejovsky/development/foss && ls -asl'
-alias stopMongo="sudo systemctl stop mongodb"
+alias dev="cd $HOME/development && ls -asl"
+alias ds="cd $HOME/development/dataservice && code ."
 alias goweb='go run ./cmd/web'
 alias loginpostgres='sudo -u postgres -i'
+alias fixtime='sudo hwclock -s'
+alias kyckpostgres='psql --host=kyck-psql-nonprod.c2xhbo8ocp9h.us-east-1.rds.amazonaws.com --port=5432 --username=postgres --password --dbname=postgres'
+alias golayout="cd $HOME/development && tree project-layout/"\
+alias gf="gofmt -s -w ."
+alias kgapi="cd $HOME/development/kyckglobalapi && sudo service redis-server start && node server.js"
+alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
 
 # git aliases
 alias stash='git stash --include-untracked'
@@ -26,10 +29,7 @@ alias push='git push origin HEAD'
 # for examples
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[ -z "$PS1" ] && return
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -139,17 +139,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-go_test() {
-  go test $* | sed ''/PASS/s//$(printf "\033[32mPASS\033[0m")/'' | sed ''/SKIP/s//$(printf "\033[34mSKIP\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' | GREP_COLOR="01;33" egrep --color=always '\s*[a-zA-Z0-9\-_.]+[:][0-9]+[:]|^'
-}
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-PATH=$(getconf PATH)
-PATH=$PATH:/usr/local/go/bin
-PATH=$PATH:/snap/bin
-export PATH
-export GOPATH=$HOME/go
-export PS1="\W > "
+export PS1="\[\033[33m\]\D{%H%M}\[\033[00m\] \[\033[36m\]\W\[\033[00m\]$ "
+
+export PATH=$PATH:/usr/local/go/bin
