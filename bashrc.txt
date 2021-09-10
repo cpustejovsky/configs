@@ -1,3 +1,4 @@
+#Test
 #My custom aliases
 
 alias bashprofile="code ~/.bashrc"
