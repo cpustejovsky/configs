@@ -1,3 +1,4 @@
+#Test
 #My custom aliases
 
 alias bashprofile="code ~/.bashrc"
@@ -10,15 +11,11 @@ alias random='cd /home/cpustejovsky/development/random && ls -asl'
 alias personal='cd /home/cpustejovsky/development/personal && ls -asl'
 alias godev='cd /home/cpustejovsky/go/src && ls -asl'
 alias stopMongo="sudo systemctl stop mongodb"
-alias loginpostgres='sudo -u postgres -i'
-alias kgui='cd $HOME/development/work/kyckglobalui/kyck-global-production-level/ && ng serve'
-alias kgapistart="clear && cd $HOME/development/work/kyckglobalapi && sudo service redis-server start && clear && npm run build && npm run serve"
-alias kgapi="cd $HOME/development/work/kyckglobalapi && clear && npm run build && npm run serve"
-alias kgapiquick="cd $HOME/development/work/kyckglobalapi && tsc && npm run serve"
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
 alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias vcsbashprofile="sh $HOME/development/bash_scripts/settings_vcs.sh"
+alias notes="cd $HOME/development/notes && code ."
 
 # git aliases
 alias stash='git stash --include-untracked'
@@ -146,6 +143,10 @@ go_test() {
 
 gco() {
   git checkout $1;
+}
+
+killport() {
+  sudo kill $(sudo lsof -t -i:$1)
 }
 
 PATH=$(getconf PATH)
