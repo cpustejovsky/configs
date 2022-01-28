@@ -12,7 +12,13 @@ alias godev='cd $HOME/go/src && ls -asl'
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
 alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
 alias update="sh $HOME/development/bash_scripts/update.sh"
-a
+alias bashrcSync="sh $HOME/development/bash_scripts/bashrc_sync.sh"
+alias obsidianSync="sh $HOME/development/bash_scripts/obsidian_sync.sh"
+
+sync_repos(){
+  obsidianSync && bashrcSync
+}
+
 # git aliases
 alias stash='git stash --include-untracked'
 alias gs='git status'
