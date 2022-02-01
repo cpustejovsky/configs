@@ -1,4 +1,3 @@
-#Test
 #My custom aliases
 
 alias bashprofile="code ~/.bashrc"
@@ -151,13 +150,6 @@ gco() {
   git checkout $1;
 }
 
-killport() {
-  sudo kill $(sudo lsof -t -i:$1)
-}
-
-PATH=$(getconf PATH)
-PATH=$PATH:/snap/bin
-
 quickCommit() {
   message="$1"
   git add . && git commit -m $message && git push
@@ -165,7 +157,9 @@ quickCommit() {
 
 export PS1="\[\033[33m\]\D{%H%M}\[\033[00m\] \[\033[36m\]\W\[\033[00m\]$ "
 
+
 PATH=$PATH:/usr/local/bin
+PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:/usr/local/go/bin
 export PATH
 export GOPATH=$HOME/go
