@@ -1,6 +1,7 @@
 #My custom aliases
 
-alias bashprofile="code ~/.bashrc"
+alias bashprofile="code $HOME/.bashrc"
+alias updateBashProfile="source $HOME/.bashrc"
 alias apt-up="sudo apt-get update && sudo apt-get upgrade"
 alias loadbt="pactl load-module module-bluetooth-discover"
 alias restartbt="sudo systemctl restart bluetooth"
@@ -14,7 +15,7 @@ alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(aut
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias bashrcSync="sh $HOME/development/bash_scripts/bashrc_sync.sh"
 alias obsidianSync="sh $HOME/development/bash_scripts/obsidian_sync.sh"
-
+alias runLocalStack="sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack"
 sync_repos(){
   obsidianSync && bashrcSync
 }
@@ -164,3 +165,4 @@ PATH=$PATH:/usr/local/go/bin
 export PATH
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+complete -C /usr/bin/terraform terraform
