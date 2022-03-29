@@ -16,6 +16,14 @@ alias update="sh $HOME/development/bash_scripts/update.sh"
 alias bashrcSync="sh $HOME/development/bash_scripts/bashrc_sync.sh"
 alias obsidianSync="sh $HOME/development/bash_scripts/obsidian_sync.sh"
 alias runLocalStack="sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack"
+alias loginpsql="sudo -i -u postgres"
+alias confluentKafkaDocker="cd $HOME/development/confluentKafkaDocker && docker compose up -d"
+
+
+localKafkaTopicCreate(){
+  cd $HOME/development/kafka_2.13-3.1.0
+  bin/kafka-topics.sh --create --topic $1 --bootstrap-server localhost:9092
+}
 
 sync_repos(){
   obsidianSync && bashrcSync
@@ -162,8 +170,13 @@ PATH=$PATH:/usr/local/go/bin
 export PATH
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export DOCKER_CONFIG=/usr/local/lib/docker
+
 complete -C /usr/bin/terraform terraform
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook bash)"
+
