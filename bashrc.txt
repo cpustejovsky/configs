@@ -6,9 +6,6 @@ alias apt-up="sudo apt-get update && sudo apt-get upgrade"
 alias loadbt="pactl load-module module-bluetooth-discover"
 alias restartbt="sudo systemctl restart bluetooth"
 alias dev='cd $HOME/development/ && ls -asl'
-alias work='cd $HOME/development/work && ls -asl'
-alias random='cd $HOME/development/random && ls -asl'
-alias personal='cd $HOME/development/personal && ls -asl'
 alias godev='cd $HOME/go/src && ls -asl'
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
 alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
@@ -18,8 +15,7 @@ alias obsidianSync="sh $HOME/development/bash_scripts/obsidian_sync.sh"
 alias runLocalStack="sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack"
 alias loginpsql="sudo -i -u postgres"
 alias confluentKafkaDocker="cd $HOME/development/confluentKafkaDocker && docker compose up -d"
-
-
+alias g="git"
 localKafkaTopicCreate(){
   cd $HOME/development/kafka_2.13-3.1.0
   bin/kafka-topics.sh --create --topic $1 --bootstrap-server localhost:9092
@@ -28,11 +24,6 @@ localKafkaTopicCreate(){
 sync_repos(){
   obsidianSync && bashrcSync
 }
-
-# git aliases
-alias stash='git stash --include-untracked'
-alias gs='git status'
-alias gc='git add . && git commit && git push'
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -180,3 +171,5 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(direnv hook bash)"
 
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
