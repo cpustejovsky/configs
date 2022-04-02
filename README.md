@@ -1,3 +1,3 @@
 # Bash Profile
 
-Where I keep my bash profiles
+Where I keep my configs
