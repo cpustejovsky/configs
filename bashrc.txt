@@ -12,6 +12,7 @@ alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(aut
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias bashrcSync="sh $HOME/development/bash_scripts/bashrc_sync.sh"
 alias obsidianSync="sh $HOME/development/bash_scripts/obsidian_sync.sh"
+alias gitSync="sh $HOME/development/bash_scripts/git_sync.sh"
 alias runLocalStack="sudo docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack"
 alias loginpsql="sudo -i -u postgres"
 alias confluentKafkaDocker="cd $HOME/development/confluentKafkaDocker && docker compose up -d"
@@ -21,8 +22,8 @@ localKafkaTopicCreate(){
   bin/kafka-topics.sh --create --topic $1 --bootstrap-server localhost:9092
 }
 
-sync_repos(){
-  obsidianSync && bashrcSync
+syncRepos(){
+  obsidianSync && bashrcSync && gitSync
 }
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
