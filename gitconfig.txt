@@ -28,5 +28,3 @@
 	insteadOf = https://github.com//
 [commit]
 	gpgsign = true
-[core]
-  editor = vim
