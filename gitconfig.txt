@@ -26,5 +26,7 @@
 
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com//
+    excludesfile = /home/cpustejovsky/.gitignore_global
+
 [commit]
 	gpgsign = true
