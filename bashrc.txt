@@ -1,19 +1,18 @@
-#My custom aliases
-alias btreconnect="bluetoothctl connect F8:4E:17:0E:5E:AD"
+#custom aliases
+alias k=kubectl
 alias updatekb="qmk flash $HOME/development/keyboard/current.hex"
-alias bashprofile="vim ~/.bashrc"
-alias loadbt="pactl load-module module-bluetooth-discover"
+alias update="sh $HOME/development/bash_scripts/update.sh"
+alias btreconnect="bluetoothctl connect F8:4E:17:0E:5E:AD"
 alias restartbt="sudo systemctl restart bluetooth"
+alias bashprofile="vim ~/.bashrc"
 alias dev='cd $HOME/development/ && ls -l'
 alias godev='cd $HOME/go/src && ls -l'
 alias cdb='godev && cd cockroach && ls -l'
+# git aliases
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
 alias gbranchall="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads"
-alias update="sh $HOME/development/bash_scripts/update.sh"
 alias bashrcSync="sh $HOME/development/bash_scripts/bashrc_sync.sh"
-alias wake="sh $HOME/development/bash_scripts/wake.sh"
 alias gitRebase="/$HOME/development/bash_scripts/git_rebase.sh"
-# git aliases
 alias stash='git stash --include-untracked'
 alias gs='git status'
 
@@ -152,22 +151,10 @@ killport() {
   sudo kill $(sudo lsof -t -i:$1)
 }
 
-killgilesports() {
-  killport 8001
-  killport 8002
-  killport 8003
-}
-
 dc() {
   docker container $@
 }
 
-sync_repos(){
-  obsidianSync && bashrcSync
-}
-
-
-PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/go/bin
 export PATH
 export GOPATH=$HOME/go
@@ -176,7 +163,6 @@ export PS1="\[\033[33m\]\D{%H%M}\[\033[00m\] \[\033[36m\]\W\[\033[00m\]$ "
 export DISPLAY=:0
 export GO111MODULE="auto" 
 export GOEXERCISM="$GOPATH/src/exercism/go/"
-# source /home/cpustejovsky/development/alacritty/extra/completions/alacritty.bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -185,7 +171,6 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(direnv hook bash)"
 complete -C /usr/bin/terraform terraform
-alias k=kubectl
 complete -o default -F __start_kubectl k
 
 # Set PATH, MANPATH, etc., for Homebrew.
