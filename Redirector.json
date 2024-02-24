@@ -1,0 +1,91 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2024-02-24T19:14:30.820Z",
+    "redirects": [
+        {
+            "description": "Send distracting social media to reminders/motivation",
+            "exampleUrl": "https://twitter.com/",
+            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "error": null,
+            "includePattern": "(twitter|instagram|facebook)\\.com",
+            "excludePattern": "",
+            "patternDesc": "Any word after example.com leads to google search for that word.",
+            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Send heroforge to reminders/motivation",
+            "exampleUrl": "https://heroforge.com/",
+            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "error": null,
+            "includePattern": "(heroforge)\\.com",
+            "excludePattern": "",
+            "patternDesc": "Any word after example.com leads to google search for that word.",
+            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Send imgur to reminders/motivation",
+            "exampleUrl": "https://imgur.com/",
+            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "error": null,
+            "includePattern": "(imgur)\\.com",
+            "excludePattern": "",
+            "patternDesc": "Any word after example.com leads to google search for that word.",
+            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "games to kindle",
+            "exampleUrl": "https://www.google.com/search?client=firefox-b-1-d&q=solitaire",
+            "exampleResult": "https://read.amazon.com/kindle-library",
+            "error": null,
+            "includePattern": "(solitaire|2048|solitare|solitar|minesweeper|soltr|steam|jigsaw)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://read.amazon.com/kindle-library",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Distractions to Kindle",
+            "exampleUrl": "https://www.netflix.com/watch/70158926?trackId=155573560",
+            "exampleResult": "https://read.amazon.com/kindle-library",
+            "error": null,
+            "includePattern": "ww.*(netflix|hulu|soap2day|soap2dayhd).*",
+            "excludePattern": "",
+            "patternDesc": "Netflix, Hulu, HBOMax to Kindle ",
+            "redirectUrl": "https://read.amazon.com/kindle-library",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
