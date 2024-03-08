@@ -21,4 +21,12 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-00 19 * * * sh /home/cpustejovsky/development/bash_scripts/obsidian_sync.sh
+05 19 * * * crontab -l > /home/cpustejovsky/development/configs/crontab.txt
+05 19 * * * cat /home/cpustejovsky/.zshrc > /home/cpustejovsky/development/configs/zshrc.txt
+05 19 * * * cat /home/cpustejovsky/.gitconfig > /home/cpustejovsky/development/configs/gitconfig.txt
+10 19 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/second_brain/
+15 19 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/configs/
+
+
+
+
