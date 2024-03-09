@@ -21,7 +21,7 @@
   
 [user]
 	name = cpustejovsky
-	email = cpustejovsky@users.noreply.github.com
+	email = charles@cpustejovsky.com
 	signingKey = C1280311C2B93CEB
 
 [url "ssh://git@github.com/"]
