@@ -147,7 +147,10 @@ alias restartbt="sudo systemctl restart bluetooth"
 alias bashprofile="vim ~/.bashrc"
 alias dev='cd $HOME/development/ && ls -l'
 alias godev='cd $HOME/go/src && ls -l'
+
 alias cdb='godev && cd cockroach && ls -l'
+alias versla='godev && cd availability && ls -l'
+alias clrs='godev && cd ready-steady-go/clrs && ls -l'
 alias versla='godev && cd availability && ls -l'
 alias schemetest='guile --no-auto-compile -s $HOME/development/schemer/test.scm'
 alias vim='nvim'
