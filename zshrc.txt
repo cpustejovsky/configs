@@ -22,6 +22,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 PATH="$HOME/.luarocks/bin:$PATH"
+PATH="$HOME/Applications/Goland-2023.3.4/bin:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
 tdt(){
 	go run "$HOME"/go/src/ready-steady-go/todotime/main.go $@
