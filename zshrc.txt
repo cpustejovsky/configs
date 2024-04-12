@@ -27,6 +27,12 @@ PATH="$PATH:/home/cpustejovsky/Applications/GoLand-2023.3.4/bin"
 tdt(){
 	go run "$HOME"/go/src/ready-steady-go/todotime/main.go $@
 }
+onepiece(){
+	go run "$HOME"/go/src/ready-steady-go/manga/main.go onePiece $@
+}
+berserk(){
+	go run "$HOME"/go/src/ready-steady-go/manga/main.go berserk $@
+}
 quotes_copy(){
 	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md 
 }
