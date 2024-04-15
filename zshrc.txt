@@ -24,18 +24,7 @@ PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.luarocks/bin:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
 PATH="$PATH:/home/cpustejovsky/Applications/GoLand-2023.3.4/bin"
-tdt(){
-	go run "$HOME"/go/src/ready-steady-go/todotime/main.go $@
-}
-onepiece(){
-	go run "$HOME"/go/src/ready-steady-go/manga/main.go onePiece $@
-}
-berserk(){
-	go run "$HOME"/go/src/ready-steady-go/manga/main.go berserk $@
-}
-quotes_copy(){
-	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md 
-}
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -190,11 +179,26 @@ function gri() {
 
 function gtd() {
 	tod -q $@
-
 }
 
-function killport() {
+killport() {
   sudo kill $(sudo lsof -t -i:$1)
+}
+
+tdt(){
+	go run "$HOME"/go/src/ready-steady-go/todotime/main.go $@
+}
+onepiece(){
+	go run "$HOME"/go/src/ready-steady-go/manga/main.go onePiece $@
+}
+berserk(){
+	go run "$HOME"/go/src/ready-steady-go/manga/main.go berserk $@
+}
+quotes_copy(){
+	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md
+}
+debdownload(){
+	/home/cpustejovsky/development/bash_scripts/download_deb $@
 }
 
 source /home/cpustejovsky/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
