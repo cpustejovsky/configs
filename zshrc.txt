@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
+# if [[ -n $SSH_CONNECTION ]]; 
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
@@ -198,7 +198,7 @@ quotes_copy(){
 	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md
 }
 debdownload(){
-	/home/cpustejovsky/development/bash_scripts/download_deb $@
+	/home/cpustejovsky/development/bash_scripts/download_deb.sh $@
 }
 
 source /home/cpustejovsky/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
