@@ -25,7 +25,8 @@
 05 19 * * * cat /home/cpustejovsky/.zshrc > /home/cpustejovsky/development/configs/zshrc.txt
 05 19 * * * cat /home/cpustejovsky/.gitconfig > /home/cpustejovsky/development/configs/gitconfig.txt
 10 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/second_brain/
-15 19 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/configs/
+15 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/configs/
+25 12 * * * sh /home/cpustejovsky/development/bash_scripts/appimage_startup.sh todoist
 
 
 

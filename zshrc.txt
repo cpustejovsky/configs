@@ -200,6 +200,10 @@ quotes_copy(){
 debdownload(){
 	/home/cpustejovsky/development/bash_scripts/download_deb.sh $@
 }
+appimage_startup(){
+	/home/cpustejovsky/development/bash_scripts/appimage_startup.sh $@
+}
+
 
 source /home/cpustejovsky/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
