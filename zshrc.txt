@@ -178,7 +178,7 @@ function gri() {
 }
 
 function gtd() {
-	tod -q $@
+	tod t q
 }
 
 killport() {
