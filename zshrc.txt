@@ -149,7 +149,6 @@ alias versla='godev && cd availability && ls -l'
 alias clrs='godev && cd ready-steady-go/clrs && ls -l'
 alias versla='godev && cd availability && ls -l'
 alias schemetest='guile --no-auto-compile -s $HOME/development/schemer/test.scm'
-alias vim='nvim'
 
 # git aliases
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
@@ -203,7 +202,4 @@ debdownload(){
 appimage_startup(){
 	/home/cpustejovsky/development/bash_scripts/appimage_startup.sh $@
 }
-
-
-source /home/cpustejovsky/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
