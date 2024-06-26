@@ -136,7 +136,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 #custom aliases
 #alias docker-compose="docker compose"
 alias k=kubectl
-alias updatekb="qmk flash $HOME/development/keyboard/current.hex"
+alias updatekb="qmk flash $HOME/development/configs/keyboard/current.hex"
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias btreconnect="bluetoothctl connect F0:A6:54:81:77:AA"
 alias restartbt="sudo systemctl restart bluetooth"
