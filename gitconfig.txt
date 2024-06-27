@@ -32,3 +32,4 @@
 	gpgsign = true
 [core]
 	editor = vim
+	excludesfile = /home/cpustejovsky/.gitignore
