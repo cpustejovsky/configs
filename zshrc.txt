@@ -188,8 +188,8 @@ tdt(){
 	go run "$HOME"/go/src/ready-steady-go/todotime/main.go $@
 }
 
-june(){
-	go run "$HOME"/go/src/ready-steady-go/junetoggl/main.go $@
+toggl(){
+	go run "$HOME"/go/src/ready-steady-go/toggl/main.go $@
 }
 onepiece(){
 	go run "$HOME"/go/src/ready-steady-go/manga/main.go onePiece $@
