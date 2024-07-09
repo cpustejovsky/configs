@@ -136,6 +136,8 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 #custom aliases
 #alias docker-compose="docker compose"
 alias k=kubectl
+alias editzsh='nvim $HOME/.zshrc'
+alias editalcritty='nvim $HOME/.config/alacritty/alacritty.toml'
 alias updatekb="qmk flash $HOME/development/configs/keyboard/current.hex"
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias btreconnect="bluetoothctl connect F0:A6:54:81:77:AA"
@@ -143,6 +145,8 @@ alias restartbt="sudo systemctl restart bluetooth"
 alias bashprofile="vim ~/.bashrc"
 alias dev='cd $HOME/development/ && ls -l'
 alias godev='cd $HOME/go/src && ls -l'
+alias vim='nvim'
+alias vi='nvim'
 
 alias cdb='godev && cd cockroach && ls -l'
 alias versla='godev && cd availability && ls -l'
