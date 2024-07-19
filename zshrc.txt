@@ -149,9 +149,8 @@ alias vim='nvim'
 alias vi='nvim'
 
 alias cdb='godev && cd cockroach && ls -l'
-alias versla='godev && cd availability && ls -l'
+alias versla='godev && cd availability && vim .'
 alias clrs='godev && cd ready-steady-go/clrs && ls -l'
-alias versla='godev && cd availability && ls -l'
 alias schemetest='guile --no-auto-compile -s $HOME/development/schemer/test.scm'
 
 # git aliases
