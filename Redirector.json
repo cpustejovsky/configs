@@ -1,50 +1,33 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2024-02-24T19:14:30.820Z",
+    "createdAt": "2024-08-12T20:11:43.270Z",
     "redirects": [
         {
-            "description": "Send distracting social media to reminders/motivation",
-            "exampleUrl": "https://twitter.com/",
-            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "description": "Example redirect, try going to http://example.com/anywordhere",
+            "exampleUrl": "http://example.com/some-word-that-matches-wildcard",
+            "exampleResult": "https://google.com/search?q=some-word-that-matches-wildcard",
             "error": null,
-            "includePattern": "(twitter|instagram|facebook)\\.com",
+            "includePattern": "http://example.com/*",
             "excludePattern": "",
             "patternDesc": "Any word after example.com leads to google search for that word.",
-            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
-            "patternType": "R",
+            "redirectUrl": "https://google.com/search?q=$1",
+            "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "grouped": false,
             "appliesTo": [
                 "main_frame"
             ]
         },
         {
-            "description": "Send heroforge to reminders/motivation",
+            "description": "Send heroforge to One Piece",
             "exampleUrl": "https://heroforge.com/",
-            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "exampleResult": "https://www.viz.com/shonenjump/chapters/one-piece",
             "error": null,
             "includePattern": "(heroforge)\\.com",
             "excludePattern": "",
             "patternDesc": "Any word after example.com leads to google search for that word.",
-            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
-            "patternType": "R",
-            "processMatches": "noProcessing",
-            "disabled": true,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Send imgur to reminders/motivation",
-            "exampleUrl": "https://imgur.com/",
-            "exampleResult": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
-            "error": null,
-            "includePattern": "(imgur)\\.com",
-            "excludePattern": "",
-            "patternDesc": "Any word after example.com leads to google search for that word.",
-            "redirectUrl": "https://docs.google.com/spreadsheets/d/1cAdHuOGTVYe7BNykO-vEfWNLbaoyXNpSAIfFyh30gy0/edit?pli=1#gid=1567862589",
+            "redirectUrl": "https://www.viz.com/shonenjump/chapters/one-piece",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -54,31 +37,48 @@
             ]
         },
         {
-            "description": "games to kindle",
-            "exampleUrl": "https://www.google.com/search?client=firefox-b-1-d&q=solitaire",
-            "exampleResult": "https://read.amazon.com/kindle-library",
-            "error": null,
-            "includePattern": "(solitaire|2048|solitare|solitar|minesweeper|soltr|steam|jigsaw)",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://read.amazon.com/kindle-library",
-            "patternType": "R",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Distractions to Kindle",
+            "description": "Distractions to One Piece",
             "exampleUrl": "https://www.netflix.com/watch/70158926?trackId=155573560",
-            "exampleResult": "https://read.amazon.com/kindle-library",
+            "exampleResult": "https://www.viz.com/shonenjump/chapters/one-piece",
             "error": null,
             "includePattern": "ww.*(netflix|hulu|soap2day|soap2dayhd).*",
             "excludePattern": "",
             "patternDesc": "Netflix, Hulu, HBOMax to Kindle ",
-            "redirectUrl": "https://read.amazon.com/kindle-library",
+            "redirectUrl": "https://www.viz.com/shonenjump/chapters/one-piece",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "games to One Piece",
+            "exampleUrl": "https://www.google.com/search?client=firefox-b-1-d&q=solitaire",
+            "exampleResult": "https://www.viz.com/shonenjump/chapters/one-piece",
+            "error": null,
+            "includePattern": "(solitaire|2048|solitare|solitar|minesweeper|soltr|jigsaw|cookieclicker)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.viz.com/shonenjump/chapters/one-piece",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Politics to Versla",
+            "exampleUrl": "https://www.reddit.com/r/PoliticalDiscussion/",
+            "exampleResult": "https://github.com/goversla/availability/issues",
+            "error": null,
+            "includePattern": "reddit.*r\\/[pP]olitic",
+            "excludePattern": "",
+            "patternDesc": "Redirect political subreddits to something within my controll",
+            "redirectUrl": "https://github.com/goversla/availability/issues",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": false,

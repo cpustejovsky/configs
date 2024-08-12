@@ -1,0 +1,12 @@
+[font]
+normal.family = "JetBrainsMono"
+size = 13.0
+
+[window]
+padding.x = 10
+padding.y = 10
+
+# opacity = 0.9
+
+decorations = "Full"
+decorations_theme_variant = "Dark"
