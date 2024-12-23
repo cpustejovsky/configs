@@ -1,35 +1,8 @@
-[alias]
-  a = add .
-  amend = commit --amend -C HEAD
-  ci = commit -m
-  st = status
-  co = checkout
-  sb = status -sb
-  mrg = merge --squash
-  cp = cherry-pick
-  br = branch
-  w = whatchanged
-  unstage = reset HEAD
-  ignore = update-index --assume-unchanged
-  pr = pull --rebase
-  diffs = diff --stat
-  l = log -10 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  summary = log --stat --summary
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  deltas = log --oneline @{u}..
-  deltasByUser = shortlog --no-merges @{u}..
-  
 [user]
-	name = cpustejovsky
 	email = charles@cpustejovsky.com
-	signingKey = C1280311C2B93CEB
-
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com//
-    excludesfile = /home/cpustejovsky/.gitignore_global
-
-[commit]
-	gpgsign = true
+	name = Charles Clinton Pustejovsky III
 [core]
-	editor = vim
-	excludesfile = /home/cpustejovsky/.gitignore
+	excludesFile = ~/.gitignore
+	editor = nvim
+[init]
+	defaultBranch = main
