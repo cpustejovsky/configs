@@ -2,8 +2,9 @@
 export DEFAULT_USER=$USER
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.cargo/env
-# *** You need to add /home/cpustejovsky/development/go/goroot/bin to your PATH.
 export PATH=$PATH:/home/cpustejovsky/development/go/goroot/bin
+export GOROOT_BOOTSTRAP=/home/cpustejovsky/go
+export GOPATH=/home/cpustejovsky/development/go/
 # export PATH=$PATH:/usr/local/go/bin
 #export VIMRUNTIME="/usr/share/nvim/runtine"
 export NVM_DIR="$HOME/.nvm"
@@ -149,10 +150,10 @@ alias godev='cd $HOME/development/go/ && ls -l'
 alias vim='nvim'
 alias vi='nvim'
 alias playground='nvim $HOME/development/go/ready-steady-go/playground/main.go'
-alias runplayground='go run ~/development/go/ready-steady-go/playground/main.go'
+alias runplayground='go run $HOME/development/go/ready-steady-go/playground/main.go'
 alias tmuxhelp='go run ~/development/go/ready-steady-go/tmux/main.go'
 alias versla='godev && cd availability && vim .'
-alias goroot='vim $HOME/development/go/goroot'
+alias goroot='cd $HOME/development/go/goroot'
 alias expressiveWriting='sh $HOME/development/bash_scripts/expressiveWriting.sh'
 
 # git aliases
@@ -209,13 +210,15 @@ timeLeft(){
 }
 
 
+
 toggl(){
   /home/cpustejovsky/development/go/toggltrack/track -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=90.0 -showIdeal=false $@
 }
 
-# ideal(){
-#   toggl -showCompareMonth=false -showIdeal=true $@
-# }
+ideal(){
+  toggl -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
+}
+
 quotes_copy(){
 	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md
 }

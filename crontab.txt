@@ -92,6 +92,8 @@ _=/usr/bin/env
 00 18 * * * redshift -P -O 1500
 # Deploy Site to App Engine if there's a clean main branch
 00 15 * * * sh /home/cpustejovsky/development/bash_scripts/deploy_personal_site.sh
+# Download YouTube videos from my Priority playlist
+00 9 * * * sh /home/cpustejovsky/development/bash_scripts/youtube.sh
 # Write over thoughts.txt just in case
 00 7 * * * echo "Tabula Rasa" > /home/cpustejovsky/.expressive_writing/thoughts.txt
 0 */4 * * * pkill slack && pkill Discord && pkill signal-desktop
