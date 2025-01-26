@@ -1,0 +1,45 @@
+{
+  "timeStamp": 1737920502267,
+  "version": "1.62.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "importedLists": [],
+    "popupPanelSections": 31
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-quick-fixes",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "aspireperimeter.securecafe.com",
+    "blank.about-scheme",
+    "chrome-extension-scheme",
+    "customer.xfinity.com",
+    "eatathero.com",
+    "hub.godaddy.com",
+    "leetcode.com",
+    "moz-extension-scheme",
+    "payments.xfinity.com",
+    "store.ancientfaith.com",
+    "www.amazon.com",
+    "www.bk.com",
+    "www.coursera.org",
+    "www.instagram.com",
+    "www.linkedin.com",
+    "www.zaxbys.com",
+    "x.com"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
+  "userFilters": "! Nov 7, 2024 https://www.reddit.com\nwww.reddit.com##recent-posts\nwww.reddit.com##.w-full.max-w-\\[750px\\].translate-x-0.w-\\[inherit\\].nd\\:visible\nwww.reddit.com##left-nav-top-section\n\n! Nov 7, 2024 https://www.instagram.com\nwww.instagram.com##.xh8yej3.x1iyjqo2 > div > .x1qrby5j.x7ja8zs.x1t2pt76.x1lytzrv.xedcshv.xarpa2k.x3igimt.x12ejxvf.xaigb6o.x1beo9mf.xv2umb2.x1jfb8zj.x1h9r5lt.x1h91t0o.x4k7w5x > .x1n2onr6\n\n! Nov 7, 2024 https://imgur.com\nimgur.com##.HomeCover.Cover\n\ngoogle.com##.hdzaWe\n\n! Nov 7, 2024 https://www.biblegateway.com\nwww.biblegateway.com##.sidebar-box > div\nwww.biblegateway.com##.flex-5.resources\nwww.biblegateway.com##nav\n\n! Nov 9, 2024 https://www.reddit.com\nwww.reddit.com##reddit-recent-pages\n\n! Nov 12, 2024 https://www.twitch.tv\nwww.twitch.tv##.iTiPMO.Layout-sc-1xcs6mc-0\nwww.twitch.tv##div.side-nav-section.dcyYPL.Layout-sc-1xcs6mc-0:nth-of-type(3)\n\n! Nov 12, 2024 https://www.youtube.com\nwww.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope\n\n! Nov 12, 2024 https://www.linkedin.com\nwww.linkedin.com##.news-module--with-game\n\n! Nov 14, 2024 https://nebula.tv\nnebula.tv##section.css-1mreh5y:nth-of-type(1)\n\n! Dec 27, 2024 https://www.amazon.com\nwww.amazon.com###a-page > .a-spacing-none.a-section\n\n! Jan 6, 2025 https://www.google.com\nwww.google.com##.ADHj4e\nwww.google.com##div.o3j99:nth-of-type(5)\n\n! Jan 13, 2025 https://www.google.com\nwww.google.com##.sLe0gf\nwww.google.com##g-expandable-container > div\nwww.google.com##.OJXvsb.Wnoohf.EyBRub.dG2XIf\nwww.google.com##.health-bmi-feedback.health-kp-feedback.kno-ftr"
+}
