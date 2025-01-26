@@ -135,13 +135,13 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k=kubectl
 alias zim='nvim $HOME/.zshrc && source $HOME/.zshrc'
 alias editalcritty='nvim $HOME/.config/alacritty/alacritty.toml'
-alias updatekb="sh $HOME/development/bash_scripts/updatekb.sh"
 alias update="sh $HOME/development/bash_scripts/update.sh"
 alias youtube="sh $HOME/development/bash_scripts/youtube.sh"
 HEADPHONE="AC:BF:71:82:7E:F3"
 alias disconnectheadphone="bluetoothctl disconnect $HEADPHONE"
 alias connectheaphone="bluetoothctl connect $HEADPHONE"
 alias removeheadphone="bluetoothctl remove $HEADPHONE"
+alias addheadphone="bluetoothctl add $HEADPHONE"
 alias btreconnect="disconnectheadphone && connectheaphone"
 alias restartbt="sudo systemctl restart bluetooth"
 alias bashprofile="vim ~/.bashrc"
@@ -206,7 +206,7 @@ killport() {
 }
 
 timeLeft(){
-      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go
+      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go $@
 }
 
 
@@ -226,6 +226,9 @@ appimage_startup(){
 	/home/cpustejovsky/development/bash_scripts/appimage_startup.sh $@
 }
 
+updatekb(){
+	/home/cpustejovsky/development/bash_scripts/updatekb.sh $@
+}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/cpustejovsky/development/google-cloud-sdk/path.zsh.inc' ]; then . '/home/cpustejovsky/development/google-cloud-sdk/path.zsh.inc'; fi
