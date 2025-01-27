@@ -85,6 +85,8 @@ _=/usr/bin/env
 05 19 * * * cat /home/cpustejovsky/.gitconfig > /home/cpustejovsky/development/configs/gitconfig.txt
 10 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/second_brain/
 15 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/development/configs/
+20 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/.config/nvim/
+25 12 * * * sh /home/cpustejovsky/development/bash_scripts/sync.sh /home/cpustejovsky/dotfiles/
 00 05 * * * redshift -P -O 6500
 00 07 * * * redshift -P -O 5500
 00 08 * * * redshift -P -O 5000
