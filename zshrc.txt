@@ -219,6 +219,14 @@ ideal(){
   toggl -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
 }
 
+workday(){
+  /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=90.0 -showIdeal=false $@
+}
+
+workdayIdeal(){
+  workday -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
+}
+
 quotes_copy(){
 	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md
 }

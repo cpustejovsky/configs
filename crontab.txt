@@ -100,3 +100,4 @@ _=/usr/bin/env
 00 7 * * * echo "Tabula Rasa" > /home/cpustejovsky/.expressive_writing/thoughts.txt
 0 */4 * * * pkill slack && pkill Discord && pkill signal-desktop
 0 5-19 * * * /home/cpustejovsky/development/go/quotes/popup
+30 5-19 * * * /home/cpustejovsky/development/go/quotes/popup prayer
