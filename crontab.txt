@@ -101,3 +101,4 @@ _=/usr/bin/env
 0 */4 * * * pkill slack && pkill Discord && pkill signal-desktop
 0 5-19 * * * /home/cpustejovsky/development/go/quotes/popup
 30 5-19 * * * /home/cpustejovsky/development/go/quotes/popup prayer
+00 7 * * * notify-send "Expressive writing helps you know what you're feeling.

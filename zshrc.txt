@@ -227,8 +227,8 @@ workdayIdeal(){
   workday -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
 }
 
-quotes_copy(){
-	xclip -sel c < /home/cpustejovsky/development/quotes/news-feed-eradicator.md
+add_quote(){
+	echo $@ >> /home/cpustejovsky/development/go/quotes/quotes.txt
 }
 appimage_startup(){
 	/home/cpustejovsky/development/bash_scripts/appimage_startup.sh $@
