@@ -167,7 +167,7 @@ alias goodmorning='redshift -P -O 6000'
 alias nightnight='redshift -P -O 1500'
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-alias feelsbad='glow $SECOND_BRAIN/Personal/Wellbeing/Priority_Mental_Health.md'
+alias feelsbad='glow "$SECOND_BRAIN/Personal/Metaphysical Wellbeing/Priority_Mental_Health.md"'
 alias whatdo='glow $SECOND_BRAIN/Personal/Wellbeing/Map.md'
 
 function FindAndReplace(){
