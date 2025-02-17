@@ -212,7 +212,7 @@ timeLeft(){
 
 
 toggl(){
-  /home/cpustejovsky/development/go/toggltrack/track -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=90.0 -showIdeal=false $@
+  /home/cpustejovsky/development/go/toggltrack/track -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=150.0 -showIdeal=false $@
 }
 
 ideal(){
