@@ -210,21 +210,26 @@ timeLeft(){
 }
 
 
-
+COMPARE_YEAR=2024 
+COMPARE_MONTH=9
+COMPARE_HOUR=83
+COMPARE_MINUTE=20
+WEEKEND_WORK=120.0
+IDEAL=1.25
 toggl(){
-  /home/cpustejovsky/development/go/toggltrack/track -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=90.0 -showIdeal=false $@
+  /home/cpustejovsky/development/go/toggltrack/track -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
 }
 
 ideal(){
-  toggl -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
+  toggl -ideal=$IDEAL -showCompareMonth=false -showIdeal=true $@
 }
 
 workday(){
-  /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=11 -compareYear=2024 -compareMonth_hour=83 -compareMonth_minute=20 -weekendWork=90.0 -showIdeal=false $@
+  /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
 }
 
 workdayIdeal(){
-  workday -ideal=1.25 -showCompareMonth=false -showIdeal=true $@
+  workday -ideal=$IDEAL -showCompareMonth=false -showIdeal=true $@
 }
 
 add_quote(){
