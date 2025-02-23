@@ -224,6 +224,9 @@ ideal(){
   toggl -ideal=$IDEAL -showCompareMonth=false -showIdeal=true $@
 }
 
+crunch(){
+  ideal -crunch=true $@
+}
 workday(){
   /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
 }
