@@ -155,6 +155,7 @@ alias tmuxhelp='go run ~/development/go/ready-steady-go/tmux/main.go'
 alias versla='godev && cd availability && vim .'
 alias goroot='cd $HOME/development/go/goroot'
 alias expressiveWriting='sh $HOME/development/bash_scripts/expressiveWriting.sh'
+alias should='go run $HOME/development/go/should/main.go'
 
 # git aliases
 alias gbranch="git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | head"
@@ -215,7 +216,7 @@ COMPARE_MONTH=9
 COMPARE_HOUR=83
 COMPARE_MINUTE=20
 WEEKEND_WORK=120.0
-IDEAL=1.25
+IDEAL=1.12
 toggl(){
   /home/cpustejovsky/development/go/toggltrack/track -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
 }
