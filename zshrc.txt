@@ -207,7 +207,7 @@ killport() {
 }
 
 timeLeft(){
-      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go $@
+      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go --gcMonth=8 --gcDay=25 $@
 }
 
 
