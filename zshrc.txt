@@ -2,10 +2,9 @@
 export DEFAULT_USER=$USER
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.cargo/env
-export PATH=$PATH:/home/cpustejovsky/development/go/goroot/bin
-export GOROOT_BOOTSTRAP=/home/cpustejovsky/go
-# export GOPATH=/home/cpustejovsky/development/go/
-# export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
 #export VIMRUNTIME="/usr/share/nvim/runtine"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
