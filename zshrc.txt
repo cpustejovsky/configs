@@ -98,6 +98,8 @@ plugins=(
 	zsh-autosuggestions
 	golang
 	direnv
+	archlinux
+	git
 )
 
 
@@ -251,3 +253,5 @@ if [ -f '/home/cpustejovsky/development/google-cloud-sdk/path.zsh.inc' ]; then .
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/cpustejovsky/development/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/cpustejovsky/development/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f "/home/cpustejovsky/.ghcup/env" ] && . "/home/cpustejovsky/.ghcup/env" # ghcup-env
