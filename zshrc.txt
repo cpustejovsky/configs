@@ -216,7 +216,7 @@ COMPARE_YEAR=2025
 COMPARE_MONTH=2
 COMPARE_HOUR=86
 COMPARE_MINUTE=57
-WEEKEND_WORK=120.0
+WEEKEND_WORK=150.0
 IDEAL=1.11
 toggl(){
   /home/cpustejovsky/development/go/toggltrack/track -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
