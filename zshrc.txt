@@ -213,13 +213,17 @@ timeLeft(){
 
 
 COMPARE_YEAR=2025 
-COMPARE_MONTH=2
-COMPARE_HOUR=86
-COMPARE_MINUTE=57
+COMPARE_MONTH=3
+COMPARE_HOUR=103
+COMPARE_MINUTE=0
 WEEKEND_WORK=150.0
-IDEAL=1.11
+IDEAL=1.155
 toggl(){
   /home/cpustejovsky/development/go/toggltrack/track -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
+}
+
+calculateIdeal(){
+  /home/cpustejovsky/development/go/toggltrack/ideal -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=120.0 $@
 }
 
 ideal(){
