@@ -202,6 +202,9 @@ function gri() {
 function gtd() {
 	tod t q --content $@
 }
+func shareWith(){
+  gtd "share with $@"
+}
 
 killport() {
   sudo kill $(sudo lsof -t -i:$1)
