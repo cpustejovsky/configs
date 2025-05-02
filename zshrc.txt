@@ -216,11 +216,11 @@ timeLeft(){
 
 
 COMPARE_YEAR=2025 
-COMPARE_MONTH=3
-COMPARE_HOUR=103
-COMPARE_MINUTE=0
+COMPARE_MONTH=4
+COMPARE_HOUR=114
+COMPARE_MINUTE=11
 WEEKEND_WORK=150.0
-IDEAL=1.155
+IDEAL=1.1122
 toggl(){
   /home/cpustejovsky/development/go/toggltrack/track -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
 }
