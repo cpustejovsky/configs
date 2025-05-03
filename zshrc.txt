@@ -154,7 +154,7 @@ alias playground='nvim $HOME/development/go/ready-steady-go/playground/main.go'
 alias runplayground='go run $HOME/development/go/ready-steady-go/playground/main.go'
 alias tmuxhelp='go run ~/development/go/ready-steady-go/tmux/main.go'
 alias versla='godev && cd availability && vim .'
-alias goroot='cd $HOME/development/go/goroot'
+alias goroot='cd $HOME/development/go/go'
 alias expressiveWriting='sh $HOME/development/bash_scripts/expressiveWriting.sh'
 alias should='go run $HOME/development/go/should/main.go'
 
