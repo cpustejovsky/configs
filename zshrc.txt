@@ -172,6 +172,9 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias feelsbad='glow "$SECOND_BRAIN/Personal/Metaphysical Wellbeing/Priority_Mental_Health.md"'
 alias whatdo='glow $SECOND_BRAIN/Personal/Wellbeing/Map.md'
 
+function gobench(){
+    go test -run none -benchmem -bench $@
+}
 function FindAndReplace(){
     sh $HOME/development/bash_scripts/find_and_replace.sh $@
 }
@@ -211,7 +214,7 @@ killport() {
 }
 
 timeLeft(){
-      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go --gcMonth=8 --gcDay=22 $@
+      go run /home/cpustejovsky/development/go/ready-steady-go/timeLeft/main.go --gcMonth=8 --gcDay=22 --endHour=19 --endMinute=30 $@
 }
 
 
