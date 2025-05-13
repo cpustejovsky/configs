@@ -172,6 +172,15 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias feelsbad='glow "$SECOND_BRAIN/Personal/Metaphysical Wellbeing/Priority_Mental_Health.md"'
 alias whatdo='glow $SECOND_BRAIN/Personal/Wellbeing/Map.md'
 
+function yay(){
+  if [ "$1" = "-S" ]; then
+    if [ "$2" = "google-chrome" ]; then
+      echo "Go make a cup of tea and defuse"
+      return
+    fi
+  fi
+  command yay "$@"
+}
 function gobench(){
     go test -run none -benchmem -bench $@
 }
