@@ -248,7 +248,7 @@ ideal(){
 }
 
 crunch(){
-  ideal -crunch=true $@
+  toggl -crunch=true $@
 }
 workday(){
   /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
@@ -259,7 +259,11 @@ workdayIdeal(){
 }
 
 add_quote(){
-	echo $@ >> /home/cpustejovsky/development/go/quotes/quotes.txt
+  sh /home/cpustejovsky/development/bash_scripts/quotes.sh quotes $@
+}
+
+add_prayer(){
+  sh /home/cpustejovsky/development/bash_scripts/prayers.sh prayers $@
 }
 appimage_startup(){
 	/home/cpustejovsky/development/bash_scripts/appimage_startup.sh $@
