@@ -186,6 +186,9 @@ function yay(){
 function gobench(){
     go test -run none -benchmem -bench $@
 }
+function interview(){
+    go test $HOME/development/go/ready-steady-go/interview/... -v
+}
 function FindAndReplace(){
     sh $HOME/development/bash_scripts/find_and_replace.sh $@
 }
@@ -248,7 +251,7 @@ ideal(){
 }
 
 crunch(){
-  ideal -crunch=true $@
+  toggl -crunch=true $@
 }
 workday(){
   /home/cpustejovsky/development/go/toggltrack/workday -compareMonth=$COMPARE_MONTH -compareYear=$COMPARE_YEAR -compareMonth_hour=$COMPARE_HOUR -compareMonth_minute=$COMPARE_MINUTE -weekendWork=$WEEKEND_WORK -showIdeal=false $@
